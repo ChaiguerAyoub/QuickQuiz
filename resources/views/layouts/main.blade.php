@@ -13,10 +13,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <title>{{config('app.name','QuickQuiz')}}</title>
+    <meta name="description" content="Quick Quiz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
@@ -48,8 +52,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+            <a class="navbar-brand" href="./"><img src="{{ asset("images/logo.png") }}" alt="Logo"></a>
+            <a class="navbar-brand hidden" href="./"><img src="{{ asset("images/logo2.png") }}" alt="Logo"></a>
         </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
